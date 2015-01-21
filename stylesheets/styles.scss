@@ -1,0 +1,110 @@
+@import "variables", "normalize.min";
+
+html {
+  box-sizing: border-box;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../images/bg.jpg) no-repeat center 60% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, input, button {
+  -webkit-font-smoothing: anitaliased;
+}
+
+h1, h2, h3, p {
+  line-height: 1.3;
+  text-align: center;
+  color: $white;
+  font-family: $regular-font;
+  font-weight: $regular-weight;
+}
+
+h1 {
+  font-family: $display-font;
+  font-size: $large-fs;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  @media (min-width: $screen-medium){
+    font-size: $extra-large-fs;
+  }
+}
+h2 {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  @media (min-width: $screen-medium) {
+    max-width: 75%;
+    font-size: $medium-fs;
+  }
+}
+
+p {
+  font-size: $small-fs;
+  @media (min-width: $screen-medium) {
+    font-size: $regular-fs;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+  font-weight: bold;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+form {
+  text-align: center;
+}
+
+input[type="email"], button[name="submit"] {
+  -webkit-appearance: none;
+  height: 2.5rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin: 0.5rem;
+}
+input[type="email"] {
+  background-color: $white;
+  border: 3px solid $light-grey;
+  border-radius: 4px;
+  box-shadow: none;
+  &:focus {
+    border: 3px solid $green;
+    outline: 0;
+  }
+}
+
+button[name="submit"] {
+  text-transform: lowercase;
+  outline:0;
+  border:3px solid $white;
+  background:none;
+  background-color: transparent;
+  color: $white;
+  width: 10rem;
+  &:hover {
+    border: 3px solid $green;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 2rem;
+  @media (min-width: $screen-small) {
+    top: 40%;
+    transform: translateY(-40%);
+  }
+}
