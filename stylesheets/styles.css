@@ -238,6 +238,7 @@ button[name="submit"] {
   @media (min-width: 400px) {
     .container {
       top: 40%;
+      -webkit-transform: translateY(-40%);
       transform: translateY(-40%); } }
 
 /*# sourceMappingURL=styles.css.map */
